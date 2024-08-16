@@ -1,0 +1,13 @@
+
+# Panel layout
+
+layout {
+ 
+  include("menu.widget")
+  label { css = "* { -GtkWidget-hexpand: true; min-height: 28px; }" }
+  include("clock.widget")
+  label { css = "* { -GtkWidget-hexpand: true; min-height: 28px; }" }
+  include("includes.widget")
+}
+
+

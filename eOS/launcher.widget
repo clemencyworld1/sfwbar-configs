@@ -1,0 +1,55 @@
+layout {
+grid {
+style = "eos"
+  button {
+    value = "sakura"
+     action = Exec "sakura"
+    tooltip = "terminal"
+    css = "* { min-height: 40px; min-width: 40px; padding-right: 5px; }"
+  }
+
+  button {
+    value = "folder"
+    action = Exec "thunar"
+        tooltip = "File Manager"
+    css = "* { min-height: 40px; min-width: 40px; padding-right: 5px; }"
+  }
+
+  button {
+    value = "floorp"
+     action = Exec "/opt/floorp/floorp"
+    tooltip = "Web Browser"
+    css = "* { min-height: 40px; min-width: 40px; padding-right: 5px; }"
+  }
+
+button {
+    value = "system-log-out-symbolic"
+    action = Exec "killall wayfire"
+    tooltip = "Quit"
+    css = "* { min-height: 40px; min-width: 40px; padding-right: 5px; }"
+  }
+
+  taskbar {
+    rows = 1;
+    icons = true;
+    labels = false;
+    group = false;
+    sort = false;
+    action[3] = Menu "winops"
+    css = "* { -GtkWidget-hexpand: false; }"
+  }
+}
+}
+
+#CSS
+button {
+background: transparent;
+border: none;
+}
+
+grid#eos {
+background: linear-gradient(to bottom, transparent 40%, #ffffff 50%);
+min-height: 28px;
+border-radius: 35px 35px 0px 0px;
+padding: 5px;
+}

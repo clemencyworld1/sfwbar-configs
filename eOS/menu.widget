@@ -1,0 +1,19 @@
+layout {
+
+  button {
+    css = "* { margin: 5px; border: none;}"
+    value = "system-search-symbolic"
+    style = "module"
+    action = Exec "jgmenu_run"
+    action[3] = Exec "killall jgmenu"
+    tooltip = "Application menu"
+  }
+
+  label {
+    style = "module"
+    value = "Applications"
+    action = Exec "jgmenu_run"
+    action[3] = Exec "killall jgmenu"
+    tooltip = "Application menu"
+  }
+}

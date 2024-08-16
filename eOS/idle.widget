@@ -1,0 +1,17 @@
+Module("idleinhibit");
+
+define Icon = If(IdleInhibitState()="on",
+        "changes-allow",
+        "changes-prevent")
+
+layout {
+  image {
+#    style = If(Ident(IdleInhibitState),"idle_inhibit","hidden")
+    style = "module"
+    value = Icon
+    tooltip = "toggle idle"
+    trigger = "idleinhibitor"
+    action[1] = SetIdleInhibitor "toggle"
+    css = "* { min-height: 24px; min-width: 24px; padding: 4px; }"
+  }
+}
