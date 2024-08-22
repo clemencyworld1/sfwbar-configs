@@ -1,0 +1,20 @@
+scanner {
+  Exec(cat /sys/class/backlight/intel_backlight/brightness) {
+  Bright = Grab(Sum)
+  }
+  }
+set BrightIcon = Lookup(Bright,
+  6000, "audio-volume-high-symbolic",
+  3000, "audio-volume-medium-symbolic",
+  30, "audio-volume-low-symbolic",
+set BIcon = $BrightIcon
+
+layout {
+  style = "module"
+  button {
+    value = "display-brightness-symbolic"
+    style = "module"
+    action = Exec "python3 ./brightness_gui.py"
+    tooltip = "brightness"
+  }
+}
