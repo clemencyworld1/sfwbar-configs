@@ -1,0 +1,80 @@
+layout {
+grid {
+style = "sur"
+  button {
+    value = "menu2.png"
+     action = Exec "jgmenu_run"
+     action[3] = Exec "killall jgmenu_run"
+    tooltip = "menu"
+    css = "* { min-height: 40px; min-width: 40px; padding-right: 5px; color: #ffffff;}"
+  }
+
+  button {
+    value = "utilities-terminal-symbolic"
+     action = Exec "qterminal"
+    tooltip = "terminal"
+    css = "* { min-height: 40px; min-width: 40px; padding-right: 5px; }"
+  }
+
+  button {
+    value = "folder"
+    action = Exec "pcmanfm-qt"
+        tooltip = "File Manager"
+    css = "* { min-height: 40px; min-width: 40px; padding-right: 5px; }"
+  }
+
+  button {
+    value = "web-browser"
+     action = Exec "falkon"
+    tooltip = "Web Browser"
+    css = "* { min-height: 40px; min-width: 40px; padding-right: 5px; }"
+  }
+
+button {
+    value = "system-shutdown-symbolic"
+    action = Exec "sudo poweroff"
+    tooltip = "Quit"
+    css = "* { min-height: 40px; min-width: 40px; padding-right: 5px; }"
+  }
+
+  taskbar {
+    rows = 1;
+    icons = true;
+    labels = false;
+    group = false;
+    sort = false;
+    action[3] = Menu "winops"
+    css = "* { -GtkWidget-hexpand: false; }"
+  }
+}
+}
+
+#CSS
+button {
+background: transparent;
+border: none;
+}
+
+grid#sur {
+background: rgba(255,255,255,0.2);
+min-height: 28px;
+border-radius: 15px 15px 0px 0px;
+padding: 10px;
+}
+
+button#taskbar_active {
+background-color: rgba(159,207,255,0.1);
+border-radius: 6px;
+border-bottom: 3px solid;
+border-color: linear-gradient(to left, #ffffff 45%, #000000 50%, #ffffff 55%);}
+
+button#taskbar_normal {
+background-color: none;
+border-radius: 6px;
+#-GtkWidget-visible: false;
+}
+
+button#taskbar_normal:hover {
+  background-color: rgba(213,213,213,0.2);
+border-radius: 6px;
+}

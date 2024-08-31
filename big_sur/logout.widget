@@ -1,0 +1,9 @@
+layout {
+  image {
+style = "module"
+    value = "system-shutdown-symbolic"
+    action = "sudo poweroff"
+    tooltip = "Poweroff"
+    css = "* { min-height: 15px; min-width: 15x; padding: 10px; color: #000000;}"
+  }
+} 

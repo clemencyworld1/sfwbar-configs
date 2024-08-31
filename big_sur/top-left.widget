@@ -1,0 +1,12 @@
+layout {
+
+  image {
+    css = "* { margin: 5px; padding: 2px; border: none; color: #000000;}"
+    value = "apple.png"
+  }
+label { value = ActiveWin(); 
+    css = "* { margin: 5px; margin-left: 30px; color: #000000;}"
+}
+include("showdesktop.widget")
+}
+
