@@ -9,3 +9,6 @@ Personal archive of my sfwbar configurations
 
 -   pes  A psnel styled from the popular game PES2013
   ![20240822_06h21m08s_grim](https://github.com/user-attachments/assets/4e54da92-062b-42d7-80a6-5ebebff7775d)
+
+-  Big_sur  Top and bottom bar resembling mac OS big sur layout
+-  ![20240831_13h16m52s_grim](https://github.com/user-attachments/assets/6093384a-aeed-493c-a39a-f868a0b2e7c2)
